@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+/* Design tokens — Tailwind utilities inse bante hain, e.g. bg-brand-500, text-ink */
+@theme {
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  --color-brand-500: #aa3bff;
+  --color-brand-600: #9333ea;
+
+  --color-ink: #08060d;
+  --color-ink-soft: #6b6375;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-ink-soft font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-ink font-medium tracking-tight;
+  }
+}
