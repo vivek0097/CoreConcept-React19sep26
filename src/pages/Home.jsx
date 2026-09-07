@@ -5,6 +5,9 @@ import { Greet } from "../ui/Greet";
 import ContactForm from "./ContactForm";
 import { CandidateProfile } from "./CandidateProfile";
 import { Product } from "./Product";
+import { Greeting } from "./Greeting";
+import { CardWrapper } from "./CardWrapper";
+import { UserCard } from "../ui/UserCard";
 
 
 
@@ -27,7 +30,24 @@ function Home() {
     <CandidateProfile />
 
     <Product title="Gaming  Laptop"  price={1500.99} inStock={true} categories={["Electroncs", "Computers", "Gaming"]}/>
+        
 
+    {/* props-- */}
+    <Greeting name="vivek" message="good  morning"/>
+    <Greeting  name="bruce" />
+    <Greeting message="welcome" />
+    <Greeting />
+
+  {/* ---spread  operator------------- */}
+   <UserCard id={1} name="Vivek" age={28} email={"vivek@gmail.com"} city="noida"/>
+
+  {/* --------wrapper -chilldren ---nestedt content------- */}
+
+    <CardWrapper title={"User Proile"}>  
+       <p>Bruice Wayne</p>
+       <p>Bruice@gmail.com</p>
+       <button>Edit Profile</button>
+    </CardWrapper>
 
     </section>
   )
