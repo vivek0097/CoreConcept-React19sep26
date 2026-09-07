@@ -3,11 +3,14 @@
 //for  thsi  you need to import it like this  import {Welcome} from "../ui/Welcome"  in the Home.jsx file
 
 
-export const Welcome = () => {
+export const Welcome = (props) => {
+  console.log(props);
+
+
   return (
     <section>               
 
-        <h1 className="text-3xl sm:text-4xl">Welcome Home</h1>
+        <h1 className="text-3xl sm:text-4xl">Welcome {props.name}  {props.alias}</h1>
 
    </section>
 

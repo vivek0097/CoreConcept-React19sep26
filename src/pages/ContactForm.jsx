@@ -37,8 +37,8 @@ import React, {useState} from 'react';
   return (
     <div>   
         <h1>this  is  contact form  component</h1>
-            <div className="contact-form bg-gray-100 p-6 rounded-lg shadow-md  flex justify-center h-40vh"> 
-                    <form className="w-1/2 max-w-md flex flex-col space-y-4" onSubmit={handleSubmit}>
+            <div className="contact-form bg-gray-100 p-6 rounded-lg shadow-md  flex justify-center border-2 h-40vh border-indigo-600"> 
+                    <form className="w-1/2 max-w-md flex flex-col space-y-4 " onSubmit={handleSubmit}>
                         <input type="text" placeholder="Enter your name" name='name' value={form.name} onChange={handleChange} />
                         <input type="email" placeholder="Enter your email" name='email' value={form.email} onChange={handleChange}/>
                         <textarea placeholder="Enter your message" name='message' value={form.message} onChange={handleChange}></textarea>
