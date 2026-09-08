@@ -8,6 +8,7 @@ import { Product } from "./Product";
 import { Greeting } from "./Greeting";
 import { CardWrapper } from "./CardWrapper";
 import { UserCard } from "../ui/UserCard";
+import { UserDetails } from "../pages/UserDetails";
 
 
 
@@ -31,7 +32,7 @@ function Home() {
 
     <Product title="Gaming  Laptop"  price={1500.99} inStock={true} categories={["Electroncs", "Computers", "Gaming"]}/>
         
-
+  {/* //-props  pattern --------------------------------------- */}
     {/* props-- */}
     <Greeting name="vivek" message="good  morning"/>
     <Greeting  name="bruce" />
@@ -46,8 +47,12 @@ function Home() {
     <CardWrapper title={"User Proile"}>  
        <p>Bruice Wayne</p>
        <p>Bruice@gmail.com</p>
-       <button>Edit Profile</button>
+       <button className="border-4 border-purple-500 cursor-pointer  bg-blue-400">Edit Profile</button>
     </CardWrapper>
+
+    {/* //-props  pattern -----end--------------------------- */}
+    {/* --------conditional  rendering  */}
+       <UserDetails name="vivek" isOnline={true} hideOffline={true} />
 
     </section>
   )
